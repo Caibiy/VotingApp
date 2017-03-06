@@ -10,7 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.1",
+    "express-stormpath": "^3.2.0",
     "mongoose": "^4.8.4",
-    "pug": "^2.0.0-beta11"
+    "pug": "^2.0.0-beta11",
+    "stormpath": "^0.20.1"
   }
 }
