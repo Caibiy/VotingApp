@@ -1,6 +1,11 @@
 doctype html
 html
 	include ./partial/head.pug
-	body
+	body(style='padding-top:70px;padding-bottom:30px')
+		include ./partial/nav.pug
+		if success
+			.alert.alert-success #{success}
+		if error
+			.alert.alert-danger #{error}
 		block content
 		include ./partial/footer.pug
