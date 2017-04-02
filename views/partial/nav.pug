@@ -1,23 +1,25 @@
-nav.navbar.navbar-inverse.navbar-fixed-top
+nav.navbar.navbar-default.navbar-fixed-top
     .container
         .navbar-header
             button.navbar-toggle.collapsed(data-target='#navbar')
             a.navbar-brand(href='#') Voting Application
         .navbar-collapse.collapse(id='navbar',aria-expanded='false',style='height:1px')
-            form(id='my_form',action='/logout',method='post')
                 ul.nav.navbar-nav.navbar-right
 
                     li
-                        a(href='/myPolls') 我的投票
+                        a(href='/mypolls') 我的投票
                     li
-                        a(href='/createPoll') 创建投票
-                    li
-                        if user
-                            a(href='/logout') 注销
-                        else
-                            a(href='login') 登录
-                    li
-                        a(href='/register') 注册
+                        a(href='/newpolls') 创建投票
                     if user
                         li
-                            a(href='/setting') 设置
+                            p.navbar-text Hello,#{user.username}
+                        li
+                            a(href='/profile')
+                                span.glyphicon.glyphicon-cog
+                        li
+                            a(href='/logout') 登出
+                    else
+                        li
+                            a(href='/login') 登录
+                        li
+                            a(href='/signup') 注册

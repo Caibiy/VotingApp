@@ -1,4 +1,11 @@
 extends layout
 
 block content
-
+    header.hero-unit(id="banner")
+        .container
+            h1 Vote Application
+            p.lead 创建一个可以在线投票的选项
+            a(href="/signup")
+                button(type="button" class="mainbutton") Sign Up
+            if message
+                .alert.alert-danger  #{message}

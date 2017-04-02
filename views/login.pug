@@ -2,12 +2,15 @@ extends layout
 block content
         .container
             h3.form-signin-heading(style="text-align:center") 欢迎登录!
-            form(role='form',style="max-width:330px;padding:15px;margin:0 auto;",method='post',action='./login_post',name='login',enctype='application/x-www-form-urlencoded')
+            form(role='form',style="max-width:330px;padding:15px;margin:0 auto;",method='post',action='./login',name='login',enctype='application/x-www-form-urlencoded')
                 .row
                 .input-field.col.s12.m6
                     label(for='name') 用户名:
-                    input.form-control(type='text',name='name')
+                    input.form-control(type='text',name='username')
                 .input-field.col.s12.m6
                     label(for='password') 密码:&#12288;
                     input.form-control(type='password',name='password')
+                .input-field.col.s12.m6
+                    label(for='email') 邮箱:&#12288;
+                    input.form-control(type='text',name='email')
                 button.btn.btn-info(type='submit',style="text-align:center;margin-top:20px") 登录
