@@ -6,6 +6,7 @@ var userSchema = mongoose.Schema({
     email:String
 });
 
+//密码加密
 userSchema.methods.generateHash=function(password){
     return brcypt.hashSync(password,brcypt.genSaltSync(8),null);
 }

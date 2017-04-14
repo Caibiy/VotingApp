@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="col-lg-6">
+        <h2>New Poll</h2>
+        <form (submit)="newPoll($event)">
+            <div class="form-group">
+                <label for="title">投票的名字</label>
+                <input type="text"  [(ngModel)]="title" [ngModelOptions]="{standalone:true}"  placeholder="投票标题">
+            </div>
+            <div class="form-group">
+                <label >选项</label>
+                <input type="text"  [(ngModel)]="option1" [ngModelOptions]="{standalone:true}" placeholder="NIKE" class="form-control">
+                <input type="text" [(ngModel)]="option2" [ngModelOptions]="{standalone:true}"   placeholder="QIAODAN" class="form-control">
+                <input type="text" [(ngModel)]="option3" [ngModelOptions]="{standalone:true}"   placeholder="LiNing" class="form-control">
+            </div>
+        
+            <div class="from-buttons">
+                <button type="submit" class="btn btn-default">提交</button>
+            </div>
+        </form>
+    </div>
+</div>
